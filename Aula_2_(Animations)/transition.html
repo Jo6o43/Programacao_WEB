@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple CSS Transform Game Example</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            border: 1px solid red;
+        }
+
+        .game-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .player {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(84, 84, 139);
+            transform: translate(-50%, -50%);
+            transition: transform 0.5s, background-color 0.5s, border-radius 0.5s;
+        }
+
+        .player:hover {
+            background-color: rgb(166, 56, 187);
+            transform: translate(-50%, -50%) scale(4);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game-area">
+        <div class="player"></div>
+    </div>
+</body>
+
+</html>

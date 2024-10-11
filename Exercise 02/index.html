@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2 - Animation</title>
+    <style>
+       
+        html,body {
+            overflow: hidden;/*Desabilita as barras de scroll*/
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+        }
+
+        .sun {
+            background-color: #ffbd06;
+            top: 25%;
+            left: 50%;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            animation: spin-sun 10s linear infinite;
+            transform-origin: 100% 1000%;
+            z-index: 2;/*Poe o obejeto acima das estrelas*/
+        }
+
+        .moon {
+            background-color: #c4c4c4;
+            top: 25%;
+            left: 50%;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(50%, 50%);
+            animation: spin-moon 10s linear infinite;
+            transform-origin: 100% 1000%;
+            z-index: 2;/*Poe o obejeto acima das estrelas*/
+        }
+
+        /*.stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+            opacity: 1;
+            transition: opacity 1s;
+            z-index: 1;
+        }*/
+
+        @keyframes spin-sun {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes spin-moon {
+            from {
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+
+            to {
+                transform: translate(-50%, -50%) rotate(540deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sun"></div>
+    <div class="moon"></div>
+    <div class="stars"></div>
+</body>
+
+</html>

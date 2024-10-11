@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="rubberband.css">
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 150px;
+        }
+
+
+        @keyframes rubberBand {
+            from {
+                transform: scale3d(1, 1, 1);
+            }
+
+            30% {
+                transform: scale3d(1.25, 0.75, 1);
+            }
+
+            40% {
+                transform: scale3d(0.75, 1.25, 1);
+            }
+
+            50% {
+                transform: scale3d(1.15, 0.85, 1);
+            }
+
+            65% {
+                transform: scale3d(0.95, 1.05, 1);
+            }
+
+            75% {
+                transform: scale3d(1.05, 0.95, 1);
+            }
+
+            to {
+                transform: scale3d(1, 1, 1);
+            }
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+            margin: 0 auto;
+            margin-top: 200px;
+            background: #63dade;
+            cursor: pointer;
+            height: 95px;
+            width: 95px;
+            line-height: 95px;
+            text-align: center;
+        }
+
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-500%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 1s ease-out;
+            margin: 0 auto;
+            margin-top: 200px;
+            background: #63dade;
+            cursor: pointer;
+            height: 95px;
+            width: 95px;
+            line-height: 95px;
+            text-align: center;
+        }
+
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rotate {
+            animation: rotate 2s linear infinite;
+            margin: 0 auto;
+            margin-top: 200px;
+            background: #63dade;
+            cursor: pointer;
+            height: 95px;
+            width: 95px;
+            line-height: 95px;
+            text-align: center;
+        }
+
+
+        .anima {
+            margin: 0 auto;
+            margin-top: 200px;
+            background: #63dade;
+            border-radius: 50%;
+            cursor: pointer;
+            height: 95px;
+            width: 95px;
+            line-height: 95px;
+            text-align: center;
+            animation: rubberBand 1s infinite;
+        }
+
+
+        @keyframes sobeEstica {
+            10% {
+                height: 50px;
+                width: 50px;
+            }
+
+            30% {
+                height: 50px;
+                width: 40px;
+            }
+
+            50% {
+                height: 50px;
+                width: 57px;
+                transform: translateY(240px);
+            }
+
+            75% {
+                height: 50px;
+                width: 57px;
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .sobe-Estica {
+            margin: 0 auto;
+            background: #63dade;
+            border-radius: 50%;
+            position: relative;
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            animation: sobeEstica 0.9s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <h2><em>Rubber Band</em></h2>
+    <div class="sobe-Estica"></div>
+</body>
+
+</html>

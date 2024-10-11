@@ -1,0 +1,24 @@
+h1{
+    text-align: center;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+}
+body {
+    background: "background.gif";
+    background-size: cover;
+}
+.tittle{
+    font-size: 30px;
+    text-align: center;
+    color: rgb(190, 188, 188);
+}
+.text{
+    font-size: 18px;
+    text-align: center;
+    color: rgb(190, 188, 188);
+} 
+

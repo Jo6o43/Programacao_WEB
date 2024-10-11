@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Awesome Site</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/10.13.2/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/10.13.2/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/10.13.2/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/10.13.2/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/10.13.2/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/10.13.2/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/10.13.2/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/10.13.2/firebase-analytics-compat.js"></script>
+  <script defer src="/__/firebase/10.13.2/firebase-remote-config-compat.js"></script>
+  <script defer src="/__/firebase/10.13.2/firebase-performance-compat.js"></script>
+  <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+<body>
+  <article>
+    <h1>📘 The Code Magazine</h1>
+
+    <p>Basic Language of the Web: HTM<br>
+        by Laura Jones on Monday, June 21st 2027</p>
+
+    <p>All modern websites and web applications are built using three <em>fundamental</em> technologies: HTML, CSS and
+      JavaScript.
+      These are the languages of the web.</p>
+
+    <p>In this post, let's focus on HTML. We will learn what HTML is all about, and why you too should learn it.</p>
+
+    <h3>What is HTML?</h3>
+
+    <p>HTML stands for HyperText Markup Language. It's a markup language that web developers use to structure and
+      describe the content of a webpage (not a programming language).</p>
+
+    <p>HTML consists of elements that describe different types of content: paragraphs, links, headings, images, video,
+      etc. Web browsers understand HTML and render HTML code as websites.</p>
+
+    <p>In HTML, each element is made up of 3 parts:</p>
+
+    <p>The opening tag<br>
+      The closing tag<br>
+      The actual element<br>
+      You can learn more at the MDN Web Docs.</p>
+
+    <p>Why should you learn HTML?</p>
+
+    <p>There are countless reasons for learning the fundamental language of the web. Here are 5 of them:</p>
+
+    <p>To be able to use the fundamental web dev language<br>
+      To hand-craft beautiful websites instead of relying on tools like Worpress or Wix<br>
+      To build web applications<br>
+      To impress friends<br>
+      To have fun 😃</p>
+
+    <p> you learned something new here. See you next time!</p>
+  </article>
+</body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const loadEl = document.querySelector('#load');
+    // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    // // The Firebase SDK is initialized and available here!
+    //
+    // firebase.auth().onAuthStateChanged(user => { });
+    // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+    // firebase.firestore().doc('/foo/bar').get().then(() => { });
+    // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+    // firebase.messaging().requestPermission().then(() => { });
+    // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+    // firebase.analytics(); // call to activate
+    // firebase.analytics().logEvent('tutorial_completed');
+    // firebase.performance(); // call to activate
+    //
+    // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+    try {
+      let app = firebase.app();
+      let features = [
+        'auth',
+        'database',
+        'firestore',
+        'functions',
+        'messaging',
+        'storage',
+        'analytics',
+        'remoteConfig',
+        'performance',
+      ].filter(feature => typeof app[feature] === 'function');
+      loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+    } catch (e) {
+      console.error(e);
+      loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+    }
+  });
+</script>
+</body>
+
+</html>
