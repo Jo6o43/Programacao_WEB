@@ -1,16 +1,14 @@
+import React from 'react';
 import userIcon from './assets/user_icon.png';
 import passwordIcon from './assets/password_icon.png';
+import './EntryScreen.css';
 
-function Body() {
-
-    {/*if regist is true, formName is "Registar", else formName is "Entrar" */ }
-    let regist = false;
-    let formName = regist ? "Registar" : "Entrar";
-
+function LoginScreen() {
     return (
         <form>
+            <div class="background-blur"></div>
             {/* header for login */}
-            <h1>{formName}</h1>
+            <h1>Entrar</h1>
 
             {/* textBox for username */}
             <div class="inputBox">
@@ -39,4 +37,4 @@ function Body() {
     );
 }
 
-export default Body;
+export default LoginScreen;
