@@ -1,13 +1,9 @@
-import Header from "./Header"
-import Footer from "./Footer"
-import Food from "./Food";
+import LoginScreen from "./loginScreen";
 
 function App() {
   return (
     <>
-      <Header />
-      <Food />
-      <Footer />
+      <LoginScreen/>
     </>
   );
 }
