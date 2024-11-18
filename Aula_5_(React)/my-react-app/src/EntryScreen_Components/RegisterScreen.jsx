@@ -3,9 +3,10 @@ import userIcon from './assets/user_icon.png';
 import passwordIcon from './assets/password_icon.png';
 import './EntryScreen.css';
 
-function EntryScreen() {
+function RegisterScreen() {
     return (
         <form>
+            <div class="background-blur"></div>
             {/* header for login */}
             <h1>Registre-se</h1>
 
@@ -37,4 +38,4 @@ function EntryScreen() {
     );
 }
 
-export default EntryScreen;
+export default RegisterScreen;

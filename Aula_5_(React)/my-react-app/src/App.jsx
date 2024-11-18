@@ -5,8 +5,8 @@ import RegisterScreen from "./EntryScreen_Components/RegisterScreen";
 function App() {
   return (
     <>
-      <LoginScreen/>
-      {/*<RegisterScreen/>*/}
+      {/*<LoginScreen/>*/}
+      <RegisterScreen/>
 
     </>
   );
