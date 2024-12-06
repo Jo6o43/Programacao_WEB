@@ -1,13 +1,15 @@
-
-function potência(base, expoente) {
-  if (expoente == 0) {
-    return 1; 
-  } else {
-    console.log(base, expoente);
-    return base * potência(base, expoente - 1); 
+function printFarmInventory(cows, chickens) {
+  let cowString = String(cows);
+  while (cowString.length < 3) {
+    cowString = "0" + cowString;
   }
+  console.log(`${cowString} Cows`);
+
+  let chickenString = String(chickens);
+  while (chickenString.length < 3) {
+    chickenString = "0" + chickenString;
+  }
+  console.log(`${chickenString} Chickens`);
 }
 
-console.log(potência(2, 3)); 
-//output -> 8
-
+printFarmInventory(7, 11);
