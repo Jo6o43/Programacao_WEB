@@ -6,8 +6,8 @@ function createPlayer(name, health, strength) {
         strength: strength,
         inventory: [],
         attack: function (target) {
-            console.log(" >> " + name + " attack " + target.name + " with " + strength + " damage.");
-            TakeDamage(target, strength, name);
+            console.log(" >> " + name + " attack " + target.name + " with " + strength + " dage.");
+            TakeDamage(target, strength, name);am
         }
     }
 }

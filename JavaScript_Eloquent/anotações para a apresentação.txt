@@ -1,0 +1,3 @@
+» usar a função do slide 6 como exemplo para o slide 7 -- usar como exemplo de função como valor, no caso a função "mario_player"
+
+» slide da recursão -- estruturas hierarquicas são a mesma coisa que nós demos na cadeira de C no 2º semestre do 1º ano
